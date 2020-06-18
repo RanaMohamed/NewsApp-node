@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const requiredEnvs = ['JWT_SECRET', 'DB_URI'];
+const requiredEnvs = ['JWT_SECRET', 'DB_URI', 'NEWS_API_KEY'];
 
 const missingEnvs = requiredEnvs.filter((envName) => !process.env[envName]);
 
@@ -13,4 +13,5 @@ module.exports = {
 	port: process.env.PORT || 3000,
 	jwtSecret: process.env.JWT_SECRET,
 	dbUri: process.env.DB_URI,
+	newsApiKey: process.env.NEWS_API_KEY,
 };

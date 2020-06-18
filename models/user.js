@@ -28,6 +28,7 @@ const schema = new mongoose.Schema(
 			minlength: [8, 'Password should have a minimum length of 8'],
 			required: [true, 'Password is required'],
 		},
+		sources: [{ type: String }],
 	},
 	{
 		timestamps: true,
