@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { dbUri } = require('./config/db');
+const { dbUri } = require('./config');
 
 const mongoose = require('mongoose');
 
