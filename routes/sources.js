@@ -37,7 +37,7 @@ router.post('/unsubscribe/:id', authenticate, async (req, res) => {
 
 	user.sources.pull(req.params.id);
 	await user.save();
-	res.json({ message: 'Source subscribed successfully' });
+	res.json({ message: 'Source unsubscribed successfully' });
 });
 
 module.exports = router;

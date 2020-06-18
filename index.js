@@ -10,6 +10,7 @@ const { port } = require('./config');
 
 const userRouter = require('./routes/user');
 const sourcesRouter = require('./routes/sources');
+const newsRouter = require('./routes/news');
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routers
 app.use(['/user', '/users'], userRouter);
 app.use(['/source', '/sources'], sourcesRouter);
+app.use('/news', newsRouter);
 
 app.use(function (req, res, next) {
 	res.status(404).send("Sorry can't find that!");
