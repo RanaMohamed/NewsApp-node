@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const authenticate = require('../middlewares/authentication');
-const NewsAPI = require('../helpers/newsapi');
+const NewsAPI = require('../helpers/newsApi');
 
 router.get('/', authenticate, async (req, res) => {
 	if (req.user.sources.length === 0 && !req.query.q)
