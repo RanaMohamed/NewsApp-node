@@ -5,6 +5,7 @@ const { body } = require('express-validator');
 
 const validateRequest = require('../middlewares/validateRequest');
 const User = require('../models/user');
+const authenticate = require('../middlewares/authentication');
 
 router.post('/register', async (req, res) => {
 	const { fullname, email, password } = req.body;
@@ -46,5 +47,9 @@ router.post(
 		res.json({ user, token });
 	}
 );
+
+router.get('/', authenticate, async (req, res) => {
+	res.json({ user: req.user });
+});
 
 module.exports = router;
