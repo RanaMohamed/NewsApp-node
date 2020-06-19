@@ -4,12 +4,15 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node .",
+		"start": "node index.js",
 		"dev": "nodemon .",
 		"debug": "nodemon --inspect .",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "",
+	"author": {
+		"name": "Rana Mohamed",
+		"email": "rana.mohamed.97@hotmail.com"
+	},
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^5.0.0",
